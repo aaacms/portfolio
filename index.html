@@ -1,44 +1,296 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanda Siebeneichler | Software Developer</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
-            <a class="cabecalho__menu__link" href="curriculo.html">Currículo</a> 
-        </nav>
-    </header>
-    <main class="apresentacao">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong></h1>
-            <p class="apresentacao__conteudo__texto">Olá! Sou Amanda Siebeneichler, desenvolvedora Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
-            <div class="apresentacao__links">
-                <h2 class="apresentaçao__links_subtitulo">Acesse minhas redes:</h2>
-                <a class="apresentacao__links__navegacao" href="https://instagram.com/amandasiebeneichler?igshid=ZDc4ODBmNjlmNQ==">
-                    <img src="./assets/instagram.png">
-                    Instagram
-                </a>
-                <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/amandasiebeneichler">
-                    <img src="./assets/linkedin.png">
-                    LinkedIn
-                </a>
-                <a class="apresentacao__links__navegacao" href="https://twitter.com/aaacms108?t=CzhMGh6gzVyIkjiCrknQTw&s=03">
-                    <img src="./assets/twitter.png">
-                    Twitter
-                </a>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home"><span class="en">Home</span><span class="pt">Início</span></a>
+        <a href="#about"><span class="en">About</span><span class="pt">Sobre</span></a>
+        <a href="#projects"><span class="en">Projects</span><span class="pt">Projetos</span></a>
+        <a href="#experience"><span class="en">Experience</span><span class="pt">Experiência</span></a>
+        <a href="#volunteering"><span class="en">Volunteering</span><span class="pt">Voluntariado</span></a>
+        <a href="#hobbies"><span class="en">Hobbies</span><span class="pt">Hobbies</span></a>
+        <a href="#contact"><span class="en">Contact</span><span class="pt">Contato</span></a>
+        <a href="Amanda_CV.pdf" class="btn-cv" download><span class="en">Download CV</span><span class="pt">Baixar
+                CV</span></a>
+        <div class="lang-switch" onclick="toggleLanguage()" title="Change Language / Mudar Idioma">
+            <span class="lang-en">🇺🇸 EN</span>
+            <span class="lang-pt">🇧🇷 PT</span>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <div class="container">
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <h1>Amanda Carolina Siebeneichler</h1>
+            <p>
+                <span class="en">Versatile Software Developer bridging efficient back-end architecture, mobile
+                    experiences, and data analytics.</span>
+                <span class="pt">Desenvolvedora de Software Versátil conectando arquitetura back-end eficiente,
+                    experiências mobile e análise de dados.</span>
+            </p>
+        </section>
+
+        <!-- ABOUT ME -->
+        <section id="about">
+            <h2><span class="en">About Me</span><span class="pt">Sobre Mim</span></h2>
+            <div class="about">
+                <img src="assets/foto-perfil.jpeg" alt="Amanda's Profile Picture" class="profile-pic">
+                <p>
+                    <span class="en">I am an undergraduate in Information Systems at UFSM. With a technical background
+                        in accounting and a passion for technology, I focus on creating clean, scalable
+                        solutions—whether developing robust frameworks, mobile applications for real-world workflows, or
+                        extracting insights from data.</span>
+                    <span class="pt">Sou estudante de Sistemas de Informação na UFSM. Com formação técnica em
+                        contabilidade e paixão por tecnologia, meu foco é criar soluções limpas e escaláveis — seja
+                        desenvolvendo frameworks robustos, aplicativos móveis para o dia a dia ou extraindo insights de
+                        dados.</span>
+                </p>
             </div>
         </section>
-        <img class="apresentacao__imagem" src="./assets/image.png" alt="Foto Amanda">
-    </main>
-    <footer class="rodape">
-        <p>Desenvolvido por AAACMS.</p>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h2><span class="en">Featured Work</span><span class="pt">Trabalhos em Destaque</span></h2>
+
+            <!-- JS Filter Buttons -->
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterProjects('all')"><span class="en">All</span><span
+                        class="pt">Todos</span></button>
+                <button class="filter-btn" onclick="filterProjects('backend')">Back-End</button>
+                <button class="filter-btn" onclick="filterProjects('mobile')">Mobile</button>
+                <button class="filter-btn" onclick="filterProjects('data')"><span class="en">Data</span><span
+                        class="pt">Dados</span></button>
+            </div>
+
+            <div class="project-grid">
+                <div class="card project-item mobile">
+                    <h3><span class="en">Sales Management App</span><span class="pt">App de Gestão de Vendas</span></h3>
+                    <p>
+                        <span class="en">Designed and built a mobile application tailored to streamline professional
+                            sales routines, inventory management, and travel logistics.</span>
+                        <span class="pt">Projetado e construído um aplicativo móvel adaptado para otimizar rotinas de
+                            vendas profissionais, gestão de estoque e logística de viagens.</span>
+                    </p>
+                    <span class="tech-tag">Flutter</span> <span class="tech-tag">Dart</span>
+                </div>
+                <div class="card project-item data backend">
+                    <h3><span class="en">Gas calculator</span><span class="pt">Calculadora de Gasolina</span></h3>
+                    <p>
+                        <span class="en">Developed a simple gas consumption calculator to assist users in estimating
+                            fuel costs based on distance and vehicle efficiency.</span>
+                        <span class="pt">Desenvolvido uma simples calculadora de consumo de gasolina para auxiliar
+                            usuários a estimar custos de combustível baseados em distância e eficiência do
+                            veículo.</span>
+                    </p>
+                    <span class="tech-tag">Java</span> <span class="tech-tag">Tkinter</span>
+                </div>
+                <div class="card project-item data backend">
+                    <h3>Sudoku</h3>
+                    <p>
+                        <span class="en">A classic Sudoku game implementation.</span>
+                        <span class="pt">Implementação clássica do jogo Sudoku.</span>
+                    </p>
+                    <span class="tech-tag">Java</span>
+                </div>
+                <div class="card project-item data backend">
+                    <h3>Snake-Game</h3>
+                    <p>
+                        <span class="en">A classic Snake game created with assembly language.</span>
+                        <span class="pt">Um clássico jogo da cobrinha criado com linguagem assembly.</span>
+                    </p>
+                    <span class="tech-tag">Assembly-mips</span>
+                </div>
+                <div class="card project-item data backend">
+                    <h3><span class="en">Amanda's Recipe App</span><span class="pt">Amanda's Recipe App</span>
+                    </h3>
+                    <p>
+                        <span class="en">It's a recipe app, where you can store your recipes, and also notes to that
+                            recipe and tags, so you can filter by what equipments the recipe require or time of the
+                            day.</span>
+                        <span class="pt">É um aplicativo de receitas, onde você pode guardar suas receitas, notas e tags
+                            para a receita, para que possa filtrar pelos equipamentos que a receita requer ou a hora do
+                            dia.</span>
+                    </p>
+                    <span class="tech-tag">React Native</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <h2><span class="en">Experience & Education</span><span class="pt">Experiência e Formação</span></h2>
+            <div class="timeline">
+                <div class="timelin    e-item">
+                    <div class="timeline-date"><span class="en">09/2024 - Present</span><span class="pt">09/2024 -
+                            Presente</span></div>
+                    <h3><span class="en">Scholarship Holder at Tutorial Educational Program - UFSM</span><span
+                            class="pt">Bolsista no Programa de Educação Tutorial - UFSM</span></h3>
+                    <p>
+                        <span class="en">Focusing on advanced computing methodologies and research.</span>
+                        <span class="pt">Foco em metodologias avançadas de computação e pesquisa.</span>
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - 2027</div>
+                    <h3><span class="en">Information Systems Undergraduate</span><span class="pt">Graduação em Sistemas
+                            de Informação</span></h3>
+                    <p>
+                        <span class="en">Federal University of Santa Maria (UFSM)</span>
+                        <span class="pt">Universidade Federal de Santa Maria (UFSM)</span>
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">07/2023 - 12/2023</div>
+                    <h3><span class="en">Full-Stack Developer Intern</span><span class="pt">Estagiária em
+                            Desenvolvimento Full-Stack</span></h3>
+                    <p>
+                        <span class="en">Focusing on advanced computing methodologies and research.</span>
+                        <span class="pt">Foco em metodologias avançadas de computação e pesquisa.</span>
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">01/2023 - 12/2023</div>
+                    <h3><span class="en">Young Apprentice</span><span class="pt">Jovem Aprendiz</span></h3>
+                    <p>
+                        <span class="en">Focusing on advanced computing methodologies and research.</span>
+                        <span class="pt">Foco em metodologias avançadas de computação e pesquisa.</span>
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <h3><span class="en">Technical Certificate in Accounting</span><span class="pt">Técnico em
+                            Contabilidade</span></h3>
+                    <p>
+                        <span class="en">Developed a foundational understanding of business and administration
+                            logic.</span>
+                        <span class="pt">Desenvolveu uma compreensão fundamental de lógica de negócios e
+                            administração.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOLUNTEERING -->
+        <section id="volunteering">
+            <h2><span class="en">Volunteering</span><span class="pt">Voluntariado</span></h2>
+            <div class="card">
+                <h3><span class="en">PET-SI Scholarship Member</span><span class="pt">Membro Bolsista PET-SI</span></h3>
+                <p>
+                    <span class="en">Active participant in teaching, research, and extension activities. Led
+                        introductory Python tutorials, developed educational manuals, and helped organize the 12th
+                        Informatics Academic Week (SAINF).</span>
+                    <span class="pt">Participante ativa em atividades de ensino, pesquisa e extensão. Ministrou
+                        tutoriais introdutórios de Python, desenvolveu manuais educacionais e ajudou a organizar a 12ª
+                        Semana Acadêmica de Informática (SAINF).</span>
+                </p>
+            </div>
+            <div class="card">
+                <h3><span class="en">Math Teacher on Extension Project</span><span class="pt">Professora de Matemática
+                        em Projeto de Extensão</span></h3>
+                <p>
+                    <span class="en">Active participant in teaching, research, and extension activities. Led
+                        introductory Python tutorials, developed educational manuals, and helped organize the 12th
+                        Informatics Academic Week (SAINF).</span>
+                    <span class="pt">Participante ativa em atividades de ensino, pesquisa e extensão. Ministrou
+                        tutoriais introdutórios de Python, desenvolveu manuais educacionais e ajudou a organizar a 12ª
+                        Semana Acadêmica de Informática (SAINF).</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- HOBBIES -->
+        <section id="hobbies">
+            <h2><span class="en">Beyond the Code</span><span class="pt">Além do Código</span></h2>
+            <div class="project-grid">
+                <div class="card">
+                    <h3><span class="en">Crochet & Textile Design</span><span class="pt">Crochê e Design Têxtil</span>
+                    </h3>
+                    <p>
+                        <span class="en">Applying mathematical grid logic and procedural structures to physical garment
+                            creation.</span>
+                        <span class="pt">Aplicando lógica de grade matemática e estruturas procedurais na criação física
+                            de roupas.</span>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3><span class="en">Cooking & Recipe Development</span><span class="pt">Culinária e Desenvolvimento
+                            de Receitas</span></h3>
+                    <p>
+                        <span class="en">Adapting board games into digital environments (Unity) and applying RPG
+                            mechanics to daily task management.</span>
+                        <span class="pt">Adaptando jogos de tabuleiro para ambientes digitais (Unity) e aplicando
+                            mecânicas de RPG no gerenciamento diário de tarefas.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" style="text-align: center;">
+            <h2><span class="en">Get In Touch</span><span class="pt">Entre em Contato</span></h2>
+            <p>
+                <span class="en">I am currently open to new opportunities across back-end, mobile, and data
+                    roles.</span>
+                <span class="pt">Estou atualmente aberta a novas oportunidades em funções de back-end, mobile e
+                    dados.</span>
+            </p>
+            <br>
+            <a href="mailto:your.email@example.com" class="filter-btn active"
+                style="text-decoration: none; padding: 12px 24px;">
+                <span class="en">Send an Email</span><span class="pt">Enviar um E-mail</span>
+            </a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>
+            <span class="en">&copy; 2026 Amanda Carolina. Built with pure HTML & CSS.</span>
+            <span class="pt">&copy; 2026 Amanda Carolina. Feito com puro HTML e CSS.</span>
+        </p>
     </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT FILTER -->
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            if (html.lang === 'en') {
+                html.lang = 'pt';
+            } else {
+                html.lang = 'en';
+            }
+        }
+
+        function filterProjects(category) {
+            // Get all buttons and cards
+            const buttons = document.querySelectorAll('.filter-btn');
+            const projects = document.querySelectorAll('.project-item');
+
+            // Update button styles
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Show or hide projects based on category
+            projects.forEach(project => {
+                if (category === 'all' || project.classList.contains(category)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
