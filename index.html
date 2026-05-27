@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amanda Siebeneichler | Software Developer</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("uzLhYCtXJGS2n1fvG");
+    </script>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+
     <nav>
         <a href="#home"><span class="en">Home</span><span class="pt">Início</span></a>
         <a href="#about"><span class="en">About</span><span class="pt">Sobre</span></a>
@@ -19,7 +23,8 @@
         <a href="#volunteering"><span class="en">Volunteering</span><span class="pt">Voluntariado</span></a>
         <a href="#hobbies"><span class="en">Hobbies</span><span class="pt">Hobbies</span></a>
         <a href="#contact"><span class="en">Contact</span><span class="pt">Contato</span></a>
-        <a href="Amanda_CV.pdf" class="btn-cv" download><span class="en">Download CV</span><span class="pt">Baixar
+        <a href="curriculum-amanda-latex.pdf" class="btn-cv" download><span class="en">Download CV</span><span
+                class="pt">Baixar
                 CV</span></a>
         <div class="lang-switch" onclick="toggleLanguage()" title="Change Language / Mudar Idioma">
             <span class="lang-en">🇺🇸 EN</span>
@@ -27,21 +32,21 @@
         </div>
     </nav>
 
-    <!-- MAIN CONTENT CONTAINER -->
+
     <div class="container">
 
-        <!-- HERO -->
+
         <section id="home" class="hero">
             <h1>Amanda Carolina Siebeneichler</h1>
             <p>
-                <span class="en">Versatile Software Developer bridging efficient back-end architecture, mobile
-                    experiences, and data analytics.</span>
-                <span class="pt">Desenvolvedora de Software Versátil conectando arquitetura back-end eficiente,
-                    experiências mobile e análise de dados.</span>
+                <span class="en">Software Developer focused on creating efficient solutions for real-world challenges.
+                    Actively seeking opportunities to contribute and grow in the field.</span>
+                <span class="pt">Desenvolvedora de Software focada em criar soluções eficientes para desafios do mundo
+                    real. Em busca de oportunidades para contribuir e crescer na área.</span>
             </p>
         </section>
 
-        <!-- ABOUT ME -->
+
         <section id="about">
             <h2><span class="en">About Me</span><span class="pt">Sobre Mim</span></h2>
             <div class="about">
@@ -49,21 +54,22 @@
                 <p>
                     <span class="en">I am an undergraduate in Information Systems at UFSM. With a technical background
                         in accounting and a passion for technology, I focus on creating clean, scalable
-                        solutions—whether developing robust frameworks, mobile applications for real-world workflows, or
-                        extracting insights from data.</span>
+                        solutions — whether developing mobile applications for real-world workflows or working in the
+                        back-end. I am currently seeking opportunities to contribute my skills and continue growing as a
+                        software developer.</span>
                     <span class="pt">Sou estudante de Sistemas de Informação na UFSM. Com formação técnica em
-                        contabilidade e paixão por tecnologia, meu foco é criar soluções limpas e escaláveis — seja
-                        desenvolvendo frameworks robustos, aplicativos móveis para o dia a dia ou extraindo insights de
-                        dados.</span>
+                        contabilidade, meu foco é criar soluções limpas e escaláveis — seja
+                        desenvolvendo aplicativos móveis ou trabalhando no back-end. Estou em busca de uma oportunidade
+                        de estágio ou emprego como desenvolvedora de software Júnior.</span>
                 </p>
             </div>
         </section>
 
-        <!-- PROJECTS -->
+
         <section id="projects">
             <h2><span class="en">Featured Work</span><span class="pt">Trabalhos em Destaque</span></h2>
 
-            <!-- JS Filter Buttons -->
+
             <div class="filters">
                 <button class="filter-btn active" onclick="filterProjects('all')"><span class="en">All</span><span
                         class="pt">Todos</span></button>
@@ -83,9 +89,13 @@
                             vendas profissionais, gestão de estoque e logística de viagens.</span>
                     </p>
                     <span class="tech-tag">Flutter</span> <span class="tech-tag">Dart</span>
+                    <a href="https://github.com/aaacms/patsche-app-v1" target="_blank" class="project-link">
+                        <span class="en">View on GitHub</span>
+                        <span class="pt">Ver no GitHub</span>
+                    </a>
                 </div>
                 <div class="card project-item data backend">
-                    <h3><span class="en">Gas calculator</span><span class="pt">Calculadora de Gasolina</span></h3>
+                    <h3><span class="en">Gas Calculator</span><span class="pt">Calculadora de Gasolina</span></h3>
                     <p>
                         <span class="en">Developed a simple gas consumption calculator to assist users in estimating
                             fuel costs based on distance and vehicle efficiency.</span>
@@ -93,15 +103,25 @@
                             usuários a estimar custos de combustível baseados em distância e eficiência do
                             veículo.</span>
                     </p>
-                    <span class="tech-tag">Java</span> <span class="tech-tag">Tkinter</span>
+                    <span class="tech-tag">Java</span>
+                    <a href="https://github.com/aaacms/calculadora-gasolina" target="_blank" class="project-link">
+                        <span class="en">View on GitHub</span>
+                        <span class="pt">Ver no GitHub</span>
+                    </a>
                 </div>
                 <div class="card project-item data backend">
                     <h3>Sudoku</h3>
                     <p>
                         <span class="en">A classic Sudoku game implementation.</span>
-                        <span class="pt">Implementação clássica do jogo Sudoku.</span>
+                        <span class="pt">Implementação clássica do jogo Sudoku em C puro, utilizando a biblioteca
+                            Allegro.</span>
                     </p>
-                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">C</span> <span class="tech-tag">Allegro</span>
+                    <a href="https://github.com/aaacms/sudoku" target="_blank" class="project-link">
+                        <span class="en">View on GitHub</span>
+                        <span class="pt">Ver no GitHub</span>
+                    </a>
+
                 </div>
                 <div class="card project-item data backend">
                     <h3>Snake-Game</h3>
@@ -110,6 +130,10 @@
                         <span class="pt">Um clássico jogo da cobrinha criado com linguagem assembly.</span>
                     </p>
                     <span class="tech-tag">Assembly-mips</span>
+                    <a href="https://github.com/aaacms/snake-game" target="_blank" class="project-link">
+                        <span class="en">View on GitHub</span>
+                        <span class="pt">Ver no GitHub</span>
+                    </a>
                 </div>
                 <div class="card project-item data backend">
                     <h3><span class="en">Amanda's Recipe App</span><span class="pt">Amanda's Recipe App</span>
@@ -123,22 +147,46 @@
                             dia.</span>
                     </p>
                     <span class="tech-tag">React Native</span>
+                    <a target="_blank" class="project-link">
+                        <span class="en">Still in Development</span>
+                        <span class="pt">Em Desenvolvimento</span>
+                    </a>
+                </div>
+                <div class="card project-item data backend">
+                    <h3><span class="en">Website Redesign for PET</span><span class="pt">Reestruturação de Website
+                            PET</span>
+                    </h3>
+                    <p>
+                        <span class="en">Redesign of the PET website with a focus on usability and design improvements.
+                            Updating team member information, publishing PET Articles, and restructuring the PET
+                            Articles
+                            section to facilitate navigation and reading of published texts.</span>
+                        <span class="pt">Atualização do website do PET com foco em melhorias de usabilidade e design.
+                            Atualização dos membros da equipe, publicação de PET Redações e reestruturação da seção de
+                            PETRedações, para facilitar a navegação e leitura dos textos publicados.</span>
+                        </span>
+                    </p>
+                    <span class="tech-tag">Wordpress</span>
+                    <a href="https://www.ufsm.br/pet/sistemas-de-informacao" target="_blank" class="project-link">
+                        <span class="en">View Website</span>
+                        <span class="pt">Ver Website</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- EXPERIENCE -->
+
         <section id="experience">
             <h2><span class="en">Experience & Education</span><span class="pt">Experiência e Formação</span></h2>
             <div class="timeline">
-                <div class="timelin    e-item">
+                <div class="timeline-item">
                     <div class="timeline-date"><span class="en">09/2024 - Present</span><span class="pt">09/2024 -
                             Presente</span></div>
                     <h3><span class="en">Scholarship Holder at Tutorial Educational Program - UFSM</span><span
                             class="pt">Bolsista no Programa de Educação Tutorial - UFSM</span></h3>
                     <p>
-                        <span class="en">Focusing on advanced computing methodologies and research.</span>
-                        <span class="pt">Foco em metodologias avançadas de computação e pesquisa.</span>
+                        <span class="en">Active participant in teaching, research, and extension activities</span>
+                        <span class="pt">Atividades de ensino, pesquisa e extensão.</span>
                     </p>
                 </div>
                 <div class="timeline-item">
@@ -152,36 +200,51 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">07/2023 - 12/2023</div>
-                    <h3><span class="en">Full-Stack Developer Intern</span><span class="pt">Estagiária em
-                            Desenvolvimento Full-Stack</span></h3>
+                    <h3><span class="en">Full-Stack Developer Intern at Tecnicon</span><span class="pt">Estagiária em
+                            Desenvolvimento Full-Stack na Tecnicon</span></h3>
                     <p>
-                        <span class="en">Focusing on advanced computing methodologies and research.</span>
-                        <span class="pt">Foco em metodologias avançadas de computação e pesquisa.</span>
+                        <span class="en">Resolved client requests using primarily Java, as well as HTML, CSS and
+                            JavaScript.</span>
+                        <span class="pt">Resolução de solicitações de clientes utilizando principalmente Java, e também
+                            HTML, CSS e JavaScript.</span>
                     </p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">01/2023 - 12/2023</div>
-                    <h3><span class="en">Young Apprentice</span><span class="pt">Jovem Aprendiz</span></h3>
+                    <h3><span class="en">Young Apprentice at John Deere</span><span class="pt">Jovem Aprendiz na John
+                            Deere</span></h3>
                     <p>
-                        <span class="en">Focusing on advanced computing methodologies and research.</span>
-                        <span class="pt">Foco em metodologias avançadas de computação e pesquisa.</span>
+                        <span class="en">Assisted with administrative tasks in the Product Engineering department.
+                            Participated in the Smart Connected Factory project.</span>
+                        <span class="pt">Auxílio em atividades administrativas do setor de Engenharia de Produto.
+                            Participação em projeto de Smart Connected Factory.</span>
                     </p>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2023</div>
-                    <h3><span class="en">Technical Certificate in Accounting</span><span class="pt">Técnico em
+                    <h3><span class="en">Technical Certificate in Accounting</span><span class="pt">Curso Técnico em
                             Contabilidade</span></h3>
                     <p>
                         <span class="en">Developed a foundational understanding of business and administration
                             logic.</span>
-                        <span class="pt">Desenvolveu uma compreensão fundamental de lógica de negócios e
+                        <span class="pt">Desenvolvi uma compreensão fundamental de lógica de negócios e
                             administração.</span>
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <h3><span class="en">Intern at CFJL</span><span class="pt">Estágiaria no CFJL</span></h3>
+                    <p>
+                        <span class="en">Assisted with daily activities of the 2-3 year old student group at Centro
+                            Tecnológico Frederico Jorge Logemann.</span>
+                        <span class="pt">Auxílio nas atividades diárias da turma de alunos de 2-3 anos da escola Centro
+                            Tecnológico Frederico Jorge Logemann.</span>
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- VOLUNTEERING -->
+
         <section id="volunteering">
             <h2><span class="en">Volunteering</span><span class="pt">Voluntariado</span></h2>
             <div class="card">
@@ -199,46 +262,87 @@
                 <h3><span class="en">Math Teacher on Extension Project</span><span class="pt">Professora de Matemática
                         em Projeto de Extensão</span></h3>
                 <p>
-                    <span class="en">Active participant in teaching, research, and extension activities. Led
-                        introductory Python tutorials, developed educational manuals, and helped organize the 12th
-                        Informatics Academic Week (SAINF).</span>
-                    <span class="pt">Participante ativa em atividades de ensino, pesquisa e extensão. Ministrou
-                        tutoriais introdutórios de Python, desenvolveu manuais educacionais e ajudou a organizar a 12ª
-                        Semana Acadêmica de Informática (SAINF).</span>
+                    <span class="en">Taught mathematics classes at UFSM for students in elementary schools preparing for
+                        the Brazilian Mathematics Olympiad for Public Schools (OBMEP).</span>
+                    <span class="pt">Aulas de matemática gratuitas na UFSM para alunos do Ensino Fundamental de escolas
+                        municipais em preparação para a Olimpíada Brasileira de Matemática das Escolas Públicas
+                        (OBMEP).</span>
+                </p>
+            </div>
+            <div class="card">
+                <h3><span class="en">BitMarias</span><span class="pt">BitMarias</span></h3>
+                <p>
+                    <span class="en">Participante de um grupo de mulheres na computação na UFSM, que busca dar apoio e
+                        visibilidade à participação feminina em computação.</span>
+                    <span class="pt">Participante de um grupo de mulheres na computação na UFSM, que busca dar apoio e
+                        visibilidade à participação feminina em computação.</span>
+                </p>
+            </div>
+            <div class="card">
+                <h3><span class="en">Treasurer - JESALU</span><span class="pt">Tesoureira - JESALU</span></h3>
+                <p>
+                    <span class="en">Administração do Caixa do grupo de jovens de Horizontina/RS. Administração do Caixa
+                        do grupo distrital de jovens da região Noroeste do Rio Grande do Sul. Organização de eventos de
+                        confraternização e comunhão entre os jovens da região Noroeste.</span>
+                    <span class="pt">Administração do Caixa do grupo de jovens de Horizontina/RS. Administração do Caixa
+                        do grupo distrital de jovens da região Noroeste do Rio Grande do Sul. Organização de eventos de
+                        confraternização e comunhão entre os jovens da região Noroeste.</span>
                 </p>
             </div>
         </section>
 
-        <!-- HOBBIES -->
+
         <section id="hobbies">
             <h2><span class="en">Beyond the Code</span><span class="pt">Além do Código</span></h2>
             <div class="project-grid">
-                <div class="card">
-                    <h3><span class="en">Crochet & Textile Design</span><span class="pt">Crochê e Design Têxtil</span>
+                <div class="card hobby-card" onclick="openModal('crochet.jpeg')">
+                    <h3><span class="en">Crochet</span><span class="pt">Crochê</span></h3>
+                    <p>
+                        <span class="en">Code Logic applied to manual crafts, AKA crochet.</span>
+                        <span class="pt">Lógica de programação aplicada às artes manuais.</span>
+                    </p>
+                    
+                </div>
+                <div class="card hobby-card" onclick="openModal('cooking.jpeg')">
+                    <h3>
+                        <span class="en">Cooking & Recipe Development</span>
+                        <span class="pt">Culinária e Desenvolvimento de Receitas</span>
                     </h3>
                     <p>
-                        <span class="en">Applying mathematical grid logic and procedural structures to physical garment
-                            creation.</span>
-                        <span class="pt">Aplicando lógica de grade matemática e estruturas procedurais na criação física
-                            de roupas.</span>
+                        <span class="en">Always testing and developing new recipes, especially in baking and natural
+                            fermentation.</span>
+                        <span class="pt">Sempre testando e desenvolvendo novas receitas, principalmente na confeitaria e
+                            na fermentação natural.</span>
                     </p>
                 </div>
-                <div class="card">
-                    <h3><span class="en">Cooking & Recipe Development</span><span class="pt">Culinária e Desenvolvimento
-                            de Receitas</span></h3>
+
+                <div class="card hobby-card">
+                    <h3>
+                        <span class="en">Languages</span>
+                        <span class="pt">Idiomas</span>
+                    </h3>
                     <p>
-                        <span class="en">Adapting board games into digital environments (Unity) and applying RPG
-                            mechanics to daily task management.</span>
-                        <span class="pt">Adaptando jogos de tabuleiro para ambientes digitais (Unity) e aplicando
-                            mecânicas de RPG no gerenciamento diário de tarefas.</span>
+                        <span class="en">Native Portuguese, Fluent English, Basic Spanish and German.</span>
+                        <span class="pt">Português nativo, Inglês fluente, Espanhol e Alemão básico.</span>
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
+        <!-- Modal -->
+        <div id="hobby-modal" onclick="closeModal()">
+            <div id="hobby-modal-content" onclick="event.stopPropagation()">
+                <button id="hobby-modal-close" onclick="closeModal()">✕</button>
+                <img id="hobby-modal-img" src="" alt="Hobby photo" />
+            </div>
+        </div>
+
+
         <section id="contact" style="text-align: center;">
-            <h2><span class="en">Get In Touch</span><span class="pt">Entre em Contato</span></h2>
+            <h2>
+                <span class="en">Get In Touch</span>
+                <span class="pt">Entre em Contato</span>
+            </h2>
             <p>
                 <span class="en">I am currently open to new opportunities across back-end, mobile, and data
                     roles.</span>
@@ -246,10 +350,23 @@
                     dados.</span>
             </p>
             <br>
-            <a href="mailto:your.email@example.com" class="filter-btn active"
-                style="text-decoration: none; padding: 12px 24px;">
-                <span class="en">Send an Email</span><span class="pt">Enviar um E-mail</span>
-            </a>
+
+            <div id="contact-form">
+                <div class="contact-field">
+                    <input type="text" id="from_name" placeholder="Nome" />
+                </div>
+                <div class="contact-field">
+                    <input type="email" id="from_email" placeholder="Email" />
+                </div>
+                <div class="contact-field">
+                    <textarea id="message" rows="5" placeholder="Mensagem"></textarea>
+                </div>
+                <button onclick="sendMailto()" class="filter-btn active contact-submit">
+                    <span class="en">Send Message</span>
+                    <span class="pt">Enviar Mensagem</span>
+                </button>
+                <p id="form-status"></p>
+            </div>
         </section>
 
     </div>
@@ -261,8 +378,23 @@
         </p>
     </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT FILTER -->
+
     <script>
+
+        function openModal(src) {
+            document.getElementById("hobby-modal-img").src = src;
+            document.getElementById("hobby-modal").classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            document.getElementById("hobby-modal").classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") closeModal();
+        });
         function toggleLanguage() {
             const html = document.documentElement;
             if (html.lang === 'en') {
@@ -273,15 +405,14 @@
         }
 
         function filterProjects(category) {
-            // Get all buttons and cards
             const buttons = document.querySelectorAll('.filter-btn');
             const projects = document.querySelectorAll('.project-item');
 
-            // Update button styles
+
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
 
-            // Show or hide projects based on category
+
             projects.forEach(project => {
                 if (category === 'all' || project.classList.contains(category)) {
                     project.style.display = 'block';
@@ -290,7 +421,39 @@
                 }
             });
         }
+
+        function sendEmail() {
+            const name = document.getElementById("from_name").value.trim();
+            const email = document.getElementById("from_email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const status = document.getElementById("form-status");
+
+            if (!name || !email || !message) {
+                status.textContent = "Por favor, preencha todos os campos.";
+                status.style.color = "red";
+                return;
+            }
+
+            emailjs.send("service_ato8b07", "template_wnxy1we", {
+                from_name: name,
+                from_email: email,
+                message: message,
+            })
+                .then(() => {
+                    status.textContent = "Mensagem enviada com sucesso! ✓";
+                    status.style.color = "green";
+                    document.getElementById("from_name").value = "";
+                    document.getElementById("from_email").value = "";
+                    document.getElementById("message").value = "";
+                })
+                .catch((err) => {
+                    console.error(err);
+                    status.textContent = "Erro ao enviar. Tente novamente.";
+                    status.style.color = "red";
+                });
+        }
     </script>
+
 </body>
 
 </html>

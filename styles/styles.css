@@ -1,6 +1,3 @@
-/* =========================================
-           1. COLORS & GLOBAL STYLES
-           ========================================= */
 :root {
     --bg-dark: #09090b;
     /* Deep minimalist black */
@@ -42,9 +39,6 @@ h4 {
     padding: 4rem 2rem;
 }
 
-/* =========================================
-           2. NAVIGATION BAR
-           ========================================= */
 nav {
     background-color: rgba(9, 9, 11, 0.9);
     position: fixed;
@@ -77,9 +71,6 @@ nav a:hover {
     color: white !important;
 }
 
-/* =========================================
-           3. HERO SECTION (HOME)
-           ========================================= */
 .hero {
     text-align: center;
     padding: 8rem 2rem 4rem;
@@ -88,7 +79,6 @@ nav a:hover {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    /* Gradient text effect */
     background: linear-gradient(to right, #a855f7 0%, #38bdf8 50%, #a855f7 100%);
     -webkit-background-clip: text;
     color: transparent;
@@ -121,9 +111,6 @@ nav a:hover {
     min-width: 300px;
 }
 
-/* =========================================
-           4. SECTIONS & CARDS
-           ========================================= */
 section {
     padding-top: 4rem;
     margin-bottom: 4rem;
@@ -151,9 +138,6 @@ section h2 {
     border-color: var(--blue);
 }
 
-/* =========================================
-           5. PROJECTS & FILTER BUTTONS
-           ========================================= */
 .filters {
     display: flex;
     gap: 10px;
@@ -184,6 +168,20 @@ section h2 {
     gap: 1.5rem;
 }
 
+.project-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: var(--accent); /* use sua variável de cor */
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.project-link:hover {
+    border-bottom-color: var(--accent);
+}
+
 .tech-tag {
     display: inline-block;
     font-size: 0.75rem;
@@ -195,9 +193,6 @@ section h2 {
     margin-top: 10px;
 }
 
-/* =========================================
-           6. EXPERIENCE TIMELINE
-           ========================================= */
 .timeline {
     border-left: 2px solid var(--purple);
     padding-left: 20px;
@@ -226,9 +221,121 @@ section h2 {
     font-weight: bold;
 }
 
-/* =========================================
-           7. FOOTER
-           ========================================= */
+/* ── Hobbies ──────────────────────────────────────────── */
+
+.hobby-card {
+    cursor: pointer;
+}
+
+.hobby-card:hover .hobby-hint {
+    color: var(--blue);
+}
+
+.hobby-hint {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+/* Modal overlay */
+#hobby-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+}
+
+#hobby-modal.active {
+    display: flex;
+}
+
+#hobby-modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+#hobby-modal-img {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+#hobby-modal-close {
+    position: absolute;
+    top: -36px;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+#hobby-modal-close:hover {
+    opacity: 1;
+}
+
+/* ── Contact ──────────────────────────────────────────── */
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-field {
+    margin-bottom: 16px;
+}
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: var(--bg-card);
+    border: 1px solid #27272a;
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+.contact-submit {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+#form-status {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 1.4rem;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -236,9 +343,6 @@ footer {
     margin-top: 4rem;
 }
 
-/* =========================================
-           8. LANGUAGE SWITCHER
-           ========================================= */
 html[lang="en"] .pt {
     display: none !important;
 }
@@ -272,7 +376,6 @@ html[lang="pt"] .en {
     transition: 0.3s;
 }
 
-/* Estado Ativo: Inglês */
 html[lang="en"] .lang-en {
     background: rgba(59, 130, 246, 0.15);
     color: var(--text-main);
@@ -283,7 +386,6 @@ html[lang="en"] .lang-pt {
     color: var(--text-muted);
 }
 
-/* Estado Ativo: Português */
 html[lang="pt"] .lang-pt {
     background: rgba(59, 130, 246, 0.15);
     color: var(--text-main);
